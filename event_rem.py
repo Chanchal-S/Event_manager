@@ -9,7 +9,8 @@ window.title("Reminder")
 #functions
 
 def add_event():
-    task = entry_event.get()
+    task = entry_event.get().split('-')
+    print(task[0])
     if task!="":
         listbox_event.insert(tkinter.END, task)
         entry_event.delete(0, tkinter.END)
